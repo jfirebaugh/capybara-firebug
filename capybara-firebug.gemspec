@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "capybara-firebug"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["John Firebaugh"]
   s.email       = ["john.firebaugh@gmail.com"]
