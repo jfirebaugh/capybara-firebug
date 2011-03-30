@@ -7,4 +7,4 @@ Bundler::GemHelper.install_tasks
 RSpec::Core::RakeTask.new
 Cucumber::Rake::Task.new
 
-task :default => :cucumber
+task :default => [:spec, :cucumber]
