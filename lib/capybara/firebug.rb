@@ -26,7 +26,7 @@ Capybara.register_driver :selenium_with_firebug do |app|
   Capybara::Driver::Selenium.new(app, :browser => :firefox, :profile => profile)
 end
 
-if defined?(Cucumber)
+if defined?(Cucumber::RbSupport)
   Before '@firebug' do
     Capybara.current_driver = :selenium_with_firebug
   end
