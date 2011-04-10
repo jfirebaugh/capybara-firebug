@@ -12,7 +12,7 @@ You'll want to be able to pause the scenario at some point to inspect things
 in Firebug. A step definition for `Then stop and let me debug` is provided
 for this purpose. When executed, it breaks in the Ruby debugger.
 
-== Customizing the Profile ==
+## Customizing the Profile
 
 If you wish to further customize the Firefox profile used by selenium, you
 can use the `#enable_firebug` method to add the Firebug extension to it:
