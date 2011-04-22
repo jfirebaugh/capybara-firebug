@@ -1,7 +1,16 @@
 require 'selenium/webdriver'
 
 class Selenium::WebDriver::Firefox::Profile
-  def enable_firebug(version = "1.6.2")
+  def self.firebug_version
+    @firebug_version ||= '1.6.2'
+  end
+
+  def self.firebug_version=(version)
+    @firebug_version = version
+  end
+
+  def enable_firebug(version = nil)
+    version ||= Selenium::WebDriver::Firefox::Profile.firebug_version
     add_extension(File.expand_path("../firebug-#{version}.xpi", __FILE__))
 
     # Prevent "Welcome!" tab
