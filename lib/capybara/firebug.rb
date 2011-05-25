@@ -32,7 +32,7 @@ end
 Capybara.register_driver :selenium_with_firebug do |app|
   profile = Selenium::WebDriver::Firefox::Profile.new
   profile.enable_firebug
-  Capybara::Driver::Selenium.new(app, :browser => :firefox, :profile => profile)
+  Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
 end
 
 if defined?(Cucumber::RbSupport)
