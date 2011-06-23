@@ -21,6 +21,14 @@ setting in your `capybara.rb` support file
     require 'capybara/firebug'
     Selenium::WebDriver::Firefox::Profile.firebug_version = '1.7.0'
 
+## Using Firefox 5 and Firebug 1.7.3
+
+If you want to use Firefox 5 you should update selenium-webdriver gem (~> 0.2.2) and set firebug_version to 1.7.3
+
+    # located in features/support/capybara.rb or similar
+    require 'capybara/firebug'
+    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.7.3'
+
 ## Customizing the Profile
 
 If you wish to further customize the Firefox profile used by selenium, you
