@@ -4,8 +4,8 @@ describe Selenium::WebDriver::Firefox::Profile do
   describe ".firebug_version" do
     subject { described_class.firebug_version }
 
-    it "defaults to 1.6.2" do
-      should == "1.6.2"
+    it "defaults to 1.7.3" do
+      should == "1.7.3"
     end
 
     context "when set" do
@@ -21,13 +21,13 @@ describe Selenium::WebDriver::Firefox::Profile do
     before { Selenium::WebDriver::Firefox::Profile.firebug_version = nil }
 
     it "adds the Firebug extension" do
-      subject.should_receive(:add_extension).with(/firebug-1\.6\.2\.xpi$/)
+      subject.should_receive(:add_extension).with(/firebug-1\.7\.3\.xpi$/)
       subject.enable_firebug
     end
 
     it "honors the configured version" do
-      Selenium::WebDriver::Firefox::Profile.firebug_version = '1.7.0'
-      subject.should_receive(:add_extension).with(/firebug-1\.7\.0\.xpi$/)
+      Selenium::WebDriver::Firefox::Profile.firebug_version = '1.6.2'
+      subject.should_receive(:add_extension).with(/firebug-1\.6\.2\.xpi$/)
       subject.enable_firebug
     end
 

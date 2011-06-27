@@ -2,7 +2,7 @@ require 'selenium/webdriver'
 
 class Selenium::WebDriver::Firefox::Profile
   def self.firebug_version
-    @firebug_version ||= '1.6.2'
+    @firebug_version ||= '1.7.3'
   end
 
   def self.firebug_version=(version)
