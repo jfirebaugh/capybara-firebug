@@ -1,25 +1,20 @@
 require 'spec_helper'
 
 describe Selenium::WebDriver::Firefox::Profile do
-  describe ".firebug_version" do
-    subject { described_class.firebug_version }
+  before { described_class.firebug_version = nil } # Reset
 
+  describe ".firebug_version" do
     it "defaults to 1.7.3" do
-      should == "1.7.3"
+      described_class.firebug_version.should == "1.7.3"
     end
 
-    context "when set" do
-      before { described_class.firebug_version = requested_version }
-
-      let(:requested_version) { '1.7.0' }
-
-      it { should == requested_version }
+    it "can be explicitly set" do
+      described_class.firebug_version = '1.7.0'
+      described_class.firebug_version.should == "1.7.0"
     end
   end
 
   describe "#enable_firebug" do
-    before { Selenium::WebDriver::Firefox::Profile.firebug_version = nil }
-
     it "adds the Firebug extension" do
       subject.should_receive(:add_extension).with(/firebug-1\.7\.3\.xpi$/)
       subject.enable_firebug
