@@ -12,17 +12,18 @@ You'll want to be able to pause the scenario at some point to inspect things
 in Firebug. A step definition for `Then stop and let me debug` is provided
 for this purpose. When executed, it breaks in the Ruby debugger.
 
-## Firefox 3
+## Firebug Versions
 
-By default, this gem uses the Firebug 1.7.x series, and so is compatible with
-Firefox 4 and 5, but not Firefox 3.
+By default, this gem uses Firebug 1.7.3, which is compatible with Firefox 3.6,
+4.0, and 5.0.
 
-If you want to use Firefox 3, you need to explicitly specify the firebug_version
-setting in your `capybara.rb` support file:
+If you want to use Firebug 1.8.0 (compatible with Firefox 5.0 only), you need
+to explicitly specify the firebug_version setting in your `capybara.rb` support
+file:
 
     # located in features/support/capybara.rb or similar
     require 'capybara/firebug'
-    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.6.2'
+    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.8.0'
 
 ## Customizing the Profile
 
