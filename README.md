@@ -17,13 +17,13 @@ for this purpose. When executed, it breaks in the Ruby debugger.
 By default, this gem uses Firebug 1.7.3, which is compatible with Firefox 3.6,
 4.0, and 5.0.
 
-If you want to use Firebug 1.8.1 (compatible with Firefox 5.0 and 6.0 only), you
+If you want to use Firebug 1.8.3 (compatible with Firefox 5, 6, 7 and 8 only), you
 need to explicitly specify the firebug_version setting in your `capybara.rb`
 support file:
 
     # located in features/support/capybara.rb or similar
     require 'capybara/firebug'
-    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.8.1'
+    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.8.3'
 
 ## Customizing the Profile
 
