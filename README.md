@@ -17,7 +17,7 @@ for this purpose. When executed, it breaks in the Ruby debugger.
 By default, this gem uses Firebug 1.7.3, which is compatible with Firefox 3.6,
 4.0, and 5.0.
 
-If you want to use Firebug 1.8.3 (compatible with Firefox 5, 6, 7 and 8 only), you
+If you want to use Firebug 1.8.3 (compatible with Firefox 5, 6, 7, and 8), you
 need to explicitly specify the firebug_version setting in your `capybara.rb`
 support file:
 
