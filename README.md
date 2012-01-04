@@ -10,7 +10,9 @@ Firebug will be set up so that all features are fully enabled on every page.
 
 You'll want to be able to pause the scenario at some point to inspect things
 in Firebug. A step definition for `Then stop and let me debug` is provided
-for this purpose. When executed, it breaks in the Ruby debugger.
+for this purpose. When executed, it breaks in the Ruby debugger. (If you are
+using bundler, you will also need to specify the correct debugging gem in your
+Gemfile: `gem 'ruby-debug'` for 1.8, `gem 'ruby-debug19'` for 1.9.)
 
 ## Firebug Versions
 
