@@ -3,7 +3,9 @@ enabled under the selenium driver.
 
 1. Install the gem
 2. `require 'capybara/firebug'` in env.rb
-3. Tag a scenario with `@firebug`
+3. Tag your scenario with firebug:
+  - For Cucumber: Tag a scenario with `@firebug`
+  - For just Capybara: Tag a scenario with `:firebug => true`
 4. Run it
 
 Firebug will be set up so that all features are fully enabled on every page.
