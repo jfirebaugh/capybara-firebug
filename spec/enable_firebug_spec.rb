@@ -4,8 +4,8 @@ describe Selenium::WebDriver::Firefox::Profile do
   before { described_class.firebug_version = nil } # Reset
 
   describe ".firebug_version" do
-    it "defaults to 1.9.1" do
-      described_class.firebug_version.should == "1.9.1"
+    it "defaults to 1.10.2" do
+      described_class.firebug_version.should == "1.10.2"
     end
 
     it "can be explicitly set" do
@@ -16,7 +16,7 @@ describe Selenium::WebDriver::Firefox::Profile do
 
   describe "#enable_firebug" do
     it "adds the Firebug extension" do
-      subject.should_receive(:add_extension).with(/firebug-1\.9\.1\.xpi$/)
+      subject.should_receive(:add_extension).with(/firebug-1\.10\.2\.xpi$/)
       subject.enable_firebug
     end
 
