@@ -26,6 +26,10 @@ class Selenium::WebDriver::Firefox::Profile
 
     # Closed by default.
     self["extensions.firebug.previousPlacement"] = 3
+
+    # Disable native "Inspect Element" menu item.
+    self["devtools.inspector.enabled"] = false
+    self["extensions.firebug.hideDefaultInspector"] = true
   end
 end
 
