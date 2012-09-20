@@ -18,7 +18,7 @@ enabled under the selenium driver.}
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency "capybara", "~> 1.0"
+  s.add_dependency "capybara", ">= 1.0"
 
   s.add_development_dependency "rspec", "~> 2.0"
   s.add_development_dependency "cucumber", "~> 0.10.0"
