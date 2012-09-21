@@ -21,5 +21,5 @@ enabled under the selenium driver.}
   s.add_dependency "capybara", ">= 1.0", "< 3.0"
 
   s.add_development_dependency "rspec", "~> 2.0"
-  s.add_development_dependency "cucumber", "~> 0.10.0"
+  s.add_development_dependency "cucumber", "~> 1.0"
 end
