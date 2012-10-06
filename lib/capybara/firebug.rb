@@ -14,7 +14,7 @@ class Selenium::WebDriver::Firefox::Profile
     add_extension(File.expand_path("../firebug-#{version}.xpi", __FILE__))
 
     # Prevent "Welcome!" tab
-    self["extensions.firebug.currentVersion"] = "999"
+    self["extensions.firebug.showFirstRunPage"] = false
 
     # Enable for all sites.
     self["extensions.firebug.allPagesActivation"] = "on"
