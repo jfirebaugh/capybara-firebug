@@ -13,6 +13,11 @@ class Selenium::WebDriver::Firefox::Profile
     version ||= Selenium::WebDriver::Firefox::Profile.firebug_version
     add_extension(File.expand_path("../firebug-#{version}.xpi", __FILE__))
 
+    # For some reason, Firebug seems to trigger the Firefox plugin check
+    # (navigating to https://www.mozilla.org/en-US/plugincheck/ at startup).
+    # This prevents it. See http://code.google.com/p/selenium/issues/detail?id=4619.
+    self["extensions.blocklist.enabled"] = false
+
     # Prevent "Welcome!" tab
     self["extensions.firebug.showFirstRunPage"] = false
 
