@@ -18,10 +18,10 @@ Gemfile: `gem 'ruby-debug'` for 1.8, `gem 'ruby-debug19'` for 1.9.)
 
 ## Firebug Versions
 
-By default, this gem uses Firebug 1.11.0, which is compatible with Firefox 17-20.
+By default, this gem uses Firebug 1.12.4, which is compatible with Firefox 23-25.
 
 If you want to use Firebug 1.7.3 (compatible with Firefox 3.6, 4, and 5), 1.9.2
-(compatible with Firefox 6-13), or 1.10.6 (compatible with Firefox 13-18), you
+(compatible with Firefox 6-13), 1.10.6 (compatible with Firefox 13-18), or 1.11.0 (compatible with Firefox 17-22), you
 need to explicitly specify the firebug_version setting in your `capybara.rb`
 support file:
 
