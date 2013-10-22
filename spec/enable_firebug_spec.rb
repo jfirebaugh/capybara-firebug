@@ -4,8 +4,8 @@ describe Selenium::WebDriver::Firefox::Profile do
   before { described_class.firebug_version = nil } # Reset
 
   describe ".firebug_version" do
-    it "defaults to 1.11.0" do
-      described_class.firebug_version.should == "1.11.0"
+    it "defaults to 1.12.4" do
+      described_class.firebug_version.should == "1.12.4"
     end
 
     it "can be explicitly set" do
