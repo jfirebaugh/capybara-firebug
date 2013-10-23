@@ -48,3 +48,5 @@ Then /^stop and let me debug$/ do
   debugger
 end
 ```
+
+Ruby 1.8.x is no longer supported. Please upgrade to 2.0 or later.
