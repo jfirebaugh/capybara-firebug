@@ -19,6 +19,7 @@ enabled under the selenium driver.}
   s.require_paths = ["lib"]
 
   s.add_dependency "capybara", ">= 1.0", "< 3.0"
+  s.add_dependency "selenium-webdriver"
 
   s.add_development_dependency "rspec", "~> 2.0"
   s.add_development_dependency "cucumber", "~> 1.0"
