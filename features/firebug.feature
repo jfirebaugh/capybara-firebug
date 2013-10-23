@@ -8,4 +8,3 @@ Feature: @firebug tag
     When I visit "http://rubygems.org/"
     Then I should be on "http://rubygems.org/"
     And Firebug should be active
-    Then stop and let me debug

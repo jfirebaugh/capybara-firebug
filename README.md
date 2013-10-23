@@ -1,21 +1,11 @@
 capybara-firebug provides a dead-simple way to run Capybara-based Cucumber
 scenarios or RSpec request specs with Firebug enabled under the selenium driver.
 
-## RSpec
-
 To use it in RSpec examples, `require 'capybara/firebug/rspec'` in spec_helper.rb,
 and tag the examples you need to debug with `:firebug => true`.
 
-## Cucumber
-
 To use it in Cucumber scenarios, `require 'capybara/firebug/cucumber'` in env.rb,
 and tag the scenarios you need to debug with `@firebug`.
-
-You'll want to be able to pause the scenario at some point to inspect things
-in Firebug. A step definition for `Then stop and let me debug` is provided
-for this purpose. When executed, it breaks in the Ruby debugger. (If you are
-using bundler, you will also need to specify the correct debugging gem in your
-Gemfile: `gem 'ruby-debug'` for 1.8, `gem 'ruby-debug19'` for 1.9.)
 
 ## Firebug Versions
 
@@ -49,3 +39,12 @@ This can also be used to enable Firebug on a remote browser:
 
 Cucumber and RSpec support has been split into separate files. You'll need to change
 spec_helper.rb to `require 'capybara/firebug/rspec'` or env.rb to `require 'capybara/firebug/cucumber'`.
+
+A "stop and let me debug" step definition is no longer provided. You can add it
+yourself if needed:
+
+```
+Then /^stop and let me debug$/ do
+  debugger
+end
+```
