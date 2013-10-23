@@ -2,4 +2,4 @@ require 'bundler'
 Bundler.require
 
 require 'capybara/cucumber'
-require 'capybara/firebug'
+require 'capybara/firebug/cucumber'

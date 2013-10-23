@@ -1,14 +1,15 @@
 capybara-firebug provides a dead-simple way to run Capybara-based Cucumber
 scenarios or RSpec request specs with Firebug enabled under the selenium driver.
 
-1. Install the gem
-2. `require 'capybara/firebug'` in env.rb or spec_helper.rb
-3. Tag the tests you need to debug:
-  - Tag Cucumber scenarios with `@firebug`
-  - Tag RSpec examples with `:firebug => true`
-4. Run 'em
+## RSpec
 
-Firebug will be set up so that all features are fully enabled on every page.
+To use it in RSpec examples, `require 'capybara/firebug/rspec'` in spec_helper.rb,
+and tag the examples you need to debug with `:firebug => true`.
+
+## Cucumber
+
+To use it in Cucumber scenarios, `require 'capybara/firebug/cucumber'` in env.rb,
+and tag the scenarios you need to debug with `@firebug`.
 
 You'll want to be able to pause the scenario at some point to inspect things
 in Firebug. A step definition for `Then stop and let me debug` is provided
@@ -43,3 +44,8 @@ This can also be used to enable Firebug on a remote browser:
        :browser => :remote,
        :url => "http://my.ip.add.ress:4444/wd/hub",
        :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => profile))
+
+## Upgrading from 1.x
+
+Cucumber and RSpec support has been split into separate files. You'll need to change
+spec_helper.rb to `require 'capybara/firebug/rspec'` or env.rb to `require 'capybara/firebug/cucumber'`.

@@ -3,4 +3,4 @@ Bundler.require(:development)
 
 require 'capybara'
 require 'capybara/rspec'
-require 'capybara/firebug'
+require 'capybara/firebug/rspec'

@@ -38,27 +38,10 @@ class Selenium::WebDriver::Firefox::Profile
   end
 end
 
+require 'capybara'
+
 Capybara.register_driver :selenium_with_firebug do |app|
   profile = Selenium::WebDriver::Firefox::Profile.new
   profile.enable_firebug
   Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
-end
-
-if defined?(Cucumber::RbSupport)
-  Before '@firebug' do
-    Capybara.current_driver = :selenium_with_firebug
-  end
-
-  Then /^stop and let me debug$/ do
-    require 'ruby-debug'
-    debugger
-  end
-end
-
-if defined?(RSpec::configure)
-  RSpec.configure do |config|
-    config.before(:each, :firebug => true) do
-      Capybara.current_driver = :selenium_with_firebug
-    end
-  end
 end
