@@ -9,16 +9,15 @@ and tag the scenarios you need to debug with `@firebug`.
 
 ## Firebug Versions
 
-By default, this gem uses Firebug 1.12.4, which is compatible with Firefox 23-25.
+By default, this gem uses Firebug 2.0.2, which is compatible with Firefox 30-32.
 
-If you want to use Firebug 1.7.3 (compatible with Firefox 3.6, 4, and 5), 1.9.2
-(compatible with Firefox 6-13), 1.10.6 (compatible with Firefox 13-18), or 1.11.0 (compatible with Firefox 17-22), you
+If you want to use Firebug 1.12.8 (compatible with Firefox 23+), you
 need to explicitly specify the firebug_version setting in your `capybara.rb`
 support file:
 
     # located in features/support/capybara.rb or similar
     require 'capybara/firebug'
-    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.7.3'
+    Selenium::WebDriver::Firefox::Profile.firebug_version = '1.12.8'
 
 ## Customizing the Profile
 
